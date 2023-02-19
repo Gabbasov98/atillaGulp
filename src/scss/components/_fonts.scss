@@ -1,0 +1,8 @@
+@import '../_mixins';
+@include font-face('Prompt', 'Prompt-Light', 300);
+@include font-face('Prompt', 'Prompt-Regular', 400);
+@include font-face('Prompt', 'Prompt-Medium', 500);
+@include font-face('Prompt', 'Prompt-SemiBold', 600);
+@include font-face('Prompt', 'Prompt-Bold', 700);
+@include font-face('Prompt', 'Prompt-ExtraBold', 800);
+@include font-face('Prompt', 'Prompt-Black', 900);

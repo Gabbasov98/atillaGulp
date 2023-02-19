@@ -1,0 +1,85 @@
+/* other - can be removed */
+.input_group {
+  max-width: 400px;
+
+}
+
+/* custom input styles */
+
+.custom_select {
+  position: relative;
+  cursor: pointer;
+}
+
+.custom_select select {
+  display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.custom_select:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url("./../assets/images/dest/svg/chevron.svg"); */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23000' d='M3.887 5 10 11.183 16.113 5 18 6.908 10 15 2 6.908 3.887 5Z' /%3E%3C/svg%3E");
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom_select.active:after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.custom_select.active .select_options {
+  display: block;
+}
+
+.select_options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 1px;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  background-color: rgb(247, 247, 247);
+}
+
+.select_option {
+  cursor: pointer;
+  padding: 8px 16px;
+  line-height: 23px;
+}
+
+.select_option:hover {
+  background-color: #e0e0e0;
+}
+
+.select_option.selected {
+  background-color: #e0e0e0;
+}
+
+.select_selected {
+  padding: 16px;
+  line-height: 23px;
+  border: 1px solid grey;
+}

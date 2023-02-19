@@ -1,0 +1,58 @@
+@import "../mixins";
+.display1{
+  font-size: 7.5em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.display2{
+  font-size: 2.5em;
+  line-height: 120%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.display3{
+  font-size: 1.125em;
+  line-height: 120%;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+}
+
+.body-text{
+  @include grid100gap(1.5em);
+  p{
+    line-height: inherit;
+  }
+}
+
+.text18{
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 160%;
+}
+
+
+
+@media screen and (max-width: 992px){
+  .display1{
+    font-size: 3.75em;
+  }
+
+  .display2{
+    font-size: 2em;
+  }
+
+  .display3,
+  .text18{
+    font-size: .875em;
+  }
+
+  .body-text{
+    gap: 1em;
+  }
+}

@@ -1,0 +1,372 @@
+@import "../mixins";
+.main{
+  padding: 11.875em 0 13.125em;
+  position: relative;
+  color: $light;
+  overflow: hidden;
+  &__content{
+    max-width: 30.375em;
+    position: relative;
+    z-index: 2;
+  }
+  &__top{
+    max-width: 27.75em;
+    @include grid100gap(.625em)
+  }
+  &__subtitle{
+    display: flex;
+    align-items: center;
+    &:after{
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      flex-grow: 1;
+      height: 1px;
+      margin-left: 1.5em;
+      border-top: $border;
+    }
+    &-text{
+      padding: .5em .7em .5em 1.5em;
+      font-weight: 300;
+      text-transform: uppercase;
+      border: $border;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+      span{
+        font-size: 1.5em;
+        letter-spacing: 0.9em;
+      }
+    }
+  }
+  &__title{
+    color: $secondary;
+  }
+  &__text{
+    margin-top: 2em;
+  }
+  &__nav{
+    margin-top: 2.5em;
+    display: flex;
+  }
+  &__img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    img{
+      width: auto;
+      height: 100%;
+      display: block;
+    }
+    ._view2{
+      display: none;
+    }
+  }
+}
+
+.solution{
+  padding: 5.25em 0 4.625em;
+  overflow-x: hidden;
+  &__inner{
+    display: grid;
+    grid-template-columns: calc(51% - 4.6875em) 49%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left{
+    img{
+      margin-left: -80%;
+      width: 180%;
+      display: block;
+    }
+  }
+  &__text{
+    margin-top: 2em;
+  }
+}
+
+.partner{
+  padding: 9.375em 0;
+  background: $linear;
+  color: $light;
+  position: relative;
+  &__inner{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 23.75em calc(100% - 23.75em - 9.375em);
+    justify-content: space-between;
+  }
+  &__text{
+    margin-top: 2em;
+  }
+  &__nav{
+    display: flex;
+    margin-top: 2.5em;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2,calc(50% - .75em));
+    gap: 1.5em;
+  }
+  &__bg,
+  &__bg2{
+    position: absolute;
+    img{
+      width: 100%;
+    }
+  }
+  &__bg{
+    width: 100%;
+    bottom: 6.4375em;
+    left: 0;
+  }
+  &__bg2{
+    width: 62.1%;
+    bottom: -6.6875em;
+    left: 3.1875em;
+  }
+}
+
+.partner-card{
+  background: linear-gradient(0deg, #34393A, #34393A), rgba(232, 231, 223, 0.05);
+  border-radius: .25em;
+  display: block;
+  &._white{
+    background: #E8E7DF;
+  }
+  &:nth-child(3){
+    grid-column: 1/-1;
+    .partner-card__wrap{
+      padding-bottom: 47%;
+    }
+  }
+  &__wrap{
+    position: relative;
+    padding-bottom: 100%;
+    svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      max-height: 5.5em;
+      max-width: 16.125em;
+    }
+  }
+}
+
+.get{
+  padding: 6.5625em 0 4em;
+  position: relative;
+  &__inner{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 24em 28.125em;
+    justify-content: space-between;
+  }
+  &__left{
+    padding-top: 2.5em;
+  }
+  &__text{
+    margin-top: 2em;
+  }
+  &__form{
+    @include grid100gap(2em);
+    margin-top: 2.5em;
+  }
+  &__btn{
+    width: 100%;
+  }
+  &__bg{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 13.8125em;
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+@media screen and (min-width: 1821px){
+  .main{
+    &__img{
+      img{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1700px){
+  .main{
+    &__img{
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .main{
+    padding: 7em 0 8em;
+    &__img{
+      height: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .main{
+    background: $linear;
+    padding: 4.875em 0 0;
+    &__img{
+      position: static;
+      width: calc(100% + 1.25em);
+      margin: -10em 0 0 -.625em;
+      height: auto;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      ._view1{
+        display: none;
+      }
+      ._view2{
+        display: block;
+      }
+    }
+    &__top{
+      gap: .5em;
+    }
+    &__subtitle{
+      &:after{
+        margin-left: 1em;
+      }
+      &-text{
+        padding: .5em .1em .5em .5em;
+        span{
+          font-size: .875em;
+        }
+      }
+    }
+    &__text,
+    &__nav{
+      margin-top: 1.5em;
+    }
+  }
+
+  .solution{
+    padding: 5em 0 1.625em;
+    &__inner{
+      grid-template-columns: 100%;
+      gap: 2.5em;
+    }
+    &__right{
+      order: -1;
+    }
+    &__left{
+      img{
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+  }
+
+  .partner{
+    padding: 3.75em 0 6.25em;
+    &__inner{
+      grid-template-columns: 100%;
+      gap: 4.375em;
+    }
+    &__nav{
+      margin-top: 1.5em;
+    }
+  }
+
+  .get{
+    padding: 5em 0;
+    &__inner{
+      grid-template-columns: 100%;
+      gap: 2.5em;
+    }
+    &__bg{
+      display: none;
+    }
+    &__form{
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .main{
+    &__img{
+      margin-top: -1.625em;
+    }
+  }
+
+  .solution{
+    &__left{
+      img{
+        width: 180%;
+        margin-left: -60%;
+      }
+    }
+  }
+
+  .partner{
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(2,calc(50% - .25em));
+      gap: .5em;
+    }
+    &__bg{
+      bottom: 25.75em;
+      overflow-x: hidden;
+      img{
+        margin-left: -3.4375em;
+        width: 51.9375em;
+      }
+    }
+    &__bg2{
+      width: 100%;
+      height: 32.9375em;
+      left: 0;
+      bottom: -2.375em;
+      overflow-x: hidden;
+      img{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .partner-card{
+    svg{
+      max-width: 6.875em;
+    }
+    &:nth-child(3){
+      svg{
+        max-width: 10.5em;
+        max-height: 3.5625em;
+      }
+    }
+  }
+}

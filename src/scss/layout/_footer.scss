@@ -1,0 +1,46 @@
+@import "../mixins";
+.footer{
+  color: $light;
+  padding: 2.5em 0;
+  background: linear-gradient(0deg, #34393A, #34393A), rgba(232, 231, 223, 0.05);
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__title{
+    font-size: .625em;
+    line-height: 160%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 1.6em;
+  }
+  &__c,
+  &__address > *,
+  &__phone{
+    font-size: .875em;
+    line-height: 160%;
+    font-weight: 500;
+  }
+  &__address{
+    max-width: 20.875em;
+    margin-top: .5em;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .footer{
+    &__inner{
+      @include grid100gap(2em);
+      align-items: unset;
+    }
+    &__c,
+    &__address > *,
+    &__phone{
+      font-size: .75em;
+    }
+  }
+}

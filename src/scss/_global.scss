@@ -1,0 +1,59 @@
+@import 'vars';
+html {
+    width: 100%;
+    font-size: unquote("min(100vw, 1280px)");
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    font-size: 1.25%;
+    font-family: $font1;
+    font-weight: 400;
+    color: $black;
+    background-color: $bg;
+    &.fixed-body {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    max-width: 1232px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+a {
+    &:hover {
+        color: $primary;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .page{
+        font-size: 2.2%;
+    }
+
+    .container{
+        padding: 0 .625em;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .page{
+        font-size: 4.27%;
+    }
+}
